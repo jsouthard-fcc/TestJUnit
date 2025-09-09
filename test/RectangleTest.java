@@ -12,4 +12,13 @@ class RectangleTest {
         assertTrue(  rect.inside( 0,5 ) );
         assertFalse( rect.inside( -1, -1 ) );
     }
+
+    @Test
+    void intersect() {
+
+        Rectangle rect1 = new Rectangle( 0,0, 5,5 );
+        Rectangle rect2 = new Rectangle( 1,1, 6,6 );
+        Rectangle rect3 = new Rectangle( -3,1, 2,6 );
+        assertTrue(  rect1.intersect( rect2 ) );
+    }
 }
